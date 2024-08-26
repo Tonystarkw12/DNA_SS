@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+<line x1="21.008194008358462" y1="62.10531837556669" x2="16.013159298454394" y2="56.510691809559404" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="11.916531077326429" y1="47.840066827227616" x2="10.766611538938147" y2="40.42873069792856" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="12.043271468631971" y1="30.924403273523808" x2="15.108184615211687" y2="24.07922061926662" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="21.347666120481474" y1="16.796983949686705" x2="27.64199338171016" y2="12.718790416420518" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="36.83820341834797" y1="10.0" x2="44.33821796274859" y2="10.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="53.53442799938641" y1="12.718790416420518" x2="59.8287552606151" y2="16.796983949686705" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="66.06823676588489" y1="24.07922061926662" x2="69.1331499124646" y2="30.924403273523822" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="70.40980984215842" y1="40.428730697928586" x2="69.25989030377013" y2="47.840066827227616" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="65.16326208264216" y1="56.510691809559404" x2="60.1682273727381" y2="62.10531837556669" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" />
+<line x1="29.338210690548284" y1="64.58506218665312" x2="51.83821069054828" y2="64.58506218665312" stroke="rgb(0%, 0%, 100%)" stroke-width="1.0" />
+<line x1="29.338210690548284" y1="67.08506218665312" x2="51.83821069054828" y2="67.08506218665312" stroke="rgb(0%, 0%, 100%)" stroke-width="1.0" />
+<circle cx="24.338210690548284" cy="65.83506218665312" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="24.338210690548284" cy="65.83506218665312" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="24.338210690548284" y="68.83506218665312" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >C</text>
+<circle cx="12.683142616264576" cy="52.780947998472975" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="12.683142616264576" cy="52.780947998472975" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="12.683142616264576" y="55.780947998472975" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >A</text>
+<circle cx="10.0" cy="35.487849526683206" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="10.0" cy="35.487849526683206" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="10.0" y="38.487849526683206" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >A</text>
+<circle cx="17.15145608384366" cy="19.515774366107223" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="17.15145608384366" cy="19.515774366107223" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="17.15145608384366" y="22.515774366107223" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >T</text>
+<circle cx="31.838203418347977" cy="10.0" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="31.838203418347977" cy="10.0" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="31.838203418347977" y="13.0" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >G</text>
+<circle cx="49.33821796274859" cy="10.0" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="49.33821796274859" cy="10.0" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="49.33821796274859" y="13.0" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >C</text>
+<circle cx="64.02496529725292" cy="19.515774366107223" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="64.02496529725292" cy="19.515774366107223" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="64.02496529725292" y="22.515774366107223" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >A</text>
+<circle cx="71.17642138109657" cy="35.48784952668322" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="71.17642138109657" cy="35.48784952668322" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="71.17642138109657" y="38.48784952668322" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >A</text>
+<circle cx="68.49327876483198" cy="52.780947998472975" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="68.49327876483198" cy="52.780947998472975" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="68.49327876483198" y="55.780947998472975" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >T</text>
+<circle cx="56.83821069054828" cy="65.83506218665312" r="5.0" stroke="none" stroke-width="1.0" fill="rgb(94%, 94%, 94%)"/>
+<circle cx="56.83821069054828" cy="65.83506218665312" r="5.0" stroke="rgb(35%, 35%, 35%)" stroke-width="1.0" fill="none"/>
+<text x="56.83821069054828" y="68.83506218665312" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(0%, 0%, 0%)" >G</text>
+<line x1="24.338210690548284" y1="73.33506218665312" x2="24.338210690548284" y2="78.33506218665312" stroke="rgb(25%, 25%, 25%)" stroke-width="1.0" />
+<text x="24.338210690548284" y="88.83506218665312" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(25%, 25%, 25%)" >1</text>
+<line x1="56.83821069054828" y1="73.33506218665312" x2="56.83821069054828" y2="78.33506218665312" stroke="rgb(25%, 25%, 25%)" stroke-width="1.0" />
+<text x="56.83821069054828" y="88.83506218665312" text-anchor="middle" font-family="Verdana" font-size="7.5" fill="rgb(25%, 25%, 25%)" >10</text>
+<text x="40.588210690548294" y="107.03506218665312" text-anchor="middle" font-family="Verdana" font-size="18.0" fill="rgb(0%, 0%, 0%)" >ENERGY = -2.9 1ZHU</text>
+</svg>
