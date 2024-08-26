@@ -46,7 +46,7 @@ def run_RNAstructure(input_file, output_folder,type='DNA'):
 def process_RNAss_output(rnastructure_folder):
     ct_files = glob.glob(os.path.join(rnastructure_folder, '*.ct'))
     for file in ct_files:
-        cmd = f'python DNA_SS/split_dnass.py -ss "{file}"'
+        cmd = f'python split_dnass.py -ss "{file}"'
         subprocess.run(cmd, shell=True)
 
 

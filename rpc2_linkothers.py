@@ -2,8 +2,8 @@
 #Usage: python rpc2_linkothers.py target.fa other1.fa other2.fa additional.fa output1.fa output2.fa
 
 #定义已知的保护序列
-prime_5 = 'GGCCTTCGGGCCAA'
-prime_3 = 'TCGATCCGGTTCGCCGGATCCATAACGGTCTTCGGACCGTTAC'
+prime_5 = 'GGCCGAAGGCCAA'
+prime_3 = 'TCGATCCGGGAACCGGATCCATAACGGTCGAAGACCGTTAC'
 
 import argparse
 import os
