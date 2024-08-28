@@ -1,7 +1,7 @@
 #!/bin/bash
 #This script is for batch generating images of RNA secondary structures
 #Usage: bash visualization_RNAss.bash <input folder> <output folder> 
-#首先分为两种情况，一种是ct文件，另一种是dbn文件。
+# First, there are two situations, one is the ct file and the other is the dbn file.
 
 
 # This script is for batch generating images of RNA secondary structures
@@ -17,7 +17,7 @@ fi
 input_folder="$1"
 output_folder="$2"
 mkdir -p "$output_folder"
-# 检查输入文件夹是否存在
+# Check if the input folder exists
 if [ ! -d "$input_folder" ]; then
     echo "Input directory '$input_folder' does not exist or is not a directory."
     exit 1

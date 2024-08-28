@@ -31,7 +31,7 @@ def rename_files(folder):
         print(f"Renamed {file} to {new_name}")
 
 
-#处理RNAstructure相关
+#Run RNAstructure
 def run_RNAstructure(input_file, output_folder,type='DNA'):
     input_path = os.path.abspath(input_file)
     output_file = os.path.join(output_folder, os.path.basename(input_file).replace('.fa', '.ct'))
@@ -50,7 +50,7 @@ def process_RNAss_output(rnastructure_folder):
         subprocess.run(cmd, shell=True)
 
 
-#画图相关
+#Draw the plots
 def plot(mfold_folder, rnastructure_folder, mfold_plot_folder, rnastructure_plot_folder):
     os.makedirs(mfold_plot_folder, exist_ok=True)
     os.makedirs(rnastructure_plot_folder, exist_ok=True)
@@ -60,7 +60,7 @@ def plot(mfold_folder, rnastructure_folder, mfold_plot_folder, rnastructure_plot
     subprocess.run(cmd_rnastructure, shell=True)
     
     
-#去除原本的ct文件
+#Remove the original ct files
 def clean_originalct(directory):
     try:
         for filename in os.listdir(directory):
@@ -72,9 +72,9 @@ def clean_originalct(directory):
     except Exception as e:
         print(f"An error occurred: {e}")
     
-#去除重复文件
+#Remove duplicates
 def hash_file(file_path):
-    """生成文件的SHA-256哈希值"""
+    """Generate a SHA-256 hash of the file"""
     hasher = hashlib.sha256()
     with open(file_path, 'rb') as file:
         buf = file.read()
@@ -82,7 +82,7 @@ def hash_file(file_path):
     return hasher.hexdigest()
 
 def removeduplicates(directory):
-    """删除指定目录及其子目录中的重复文件"""
+    """Delete duplicate files in the specified directory and its subdirectories"""
     hashes = {}
     duplicates = []
 
@@ -95,12 +95,12 @@ def removeduplicates(directory):
                 duplicates.append(file_path)
             else:
                 hashes[file_hash] = file_path
-#主函数
+
 def main():
-    parser = argparse.ArgumentParser(description="处理DNA二级结构预测文件。")
-    parser.add_argument('-i', '--input_folder', type=str, required=True, help='输入文件夹的路径。')
-    parser.add_argument('-o', '--output_folder', type=str, required=True, help='输出文件夹的路径。')
-    parser.add_argument('-t','--type', type=str, default='DNA', help='指定处理的是DNA还是RNA，默认为DNA')
+    parser = argparse.ArgumentParser(description="Processing DNA secondary structure prediction files.")
+    parser.add_argument('-i', '--input_folder', type=str, required=True, help='The path of the input folder')
+    parser.add_argument('-o', '--output_folder', type=str, required=True, help='THe path of the output folder')
+    parser.add_argument('-t','--type', type=str, default='DNA', help='Specifies whether to process DNA or RNA. The default is DNA.')
     args = parser.parse_args()
     
     results_folder = os.path.join(args.output_folder, 'results')
@@ -118,22 +118,22 @@ def main():
     input_files = glob.glob(os.path.join(args.input_folder, '*.fa'))
     
     for input_file in input_files:
-        #运行mfold和RNAstructure
+        #Run mfold and RNAstructure
         run_mfold(input_file, mfold_folder, args.type)
         run_RNAstructure(input_file, rnastructure_folder, args.type)
-    #处理RNAstructure的输出
+    #Process RNAstructure output
     process_RNAss_output(rnastructure_folder)
-    #process_RNAss_output(mfold_folder) (好像是因为mfold自己就会自动分割，不需要再次分割)
+    #process_RNAss_output(mfold_folder) (It seems that mfold will automatically split itself and does not need to be split again)
     clean_originalct(rnastructure_folder)
     removeduplicates(rnastructure_folder)
     
-    #处理mfold的输出
+    #Process mfold output
     cleanup_nonct_files(mfold_folder)
     clean_originalct(mfold_folder)
     rename_files(mfold_folder)
     removeduplicates(mfold_folder)
     
-    #画图
+    #Draw the plots
     plot(mfold_folder, rnastructure_folder, mfold_plot_folder, rnastructure_plot_folder)
     
     print(f'Processed {len(input_files)} DNA sequences in {args.input_folder}')

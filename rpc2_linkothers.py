@@ -1,7 +1,7 @@
 #This script is used to create .fa files based on rpc2.fa and other .fa files to create a new .fa file
 #Usage: python rpc2_linkothers.py target.fa other1.fa other2.fa additional.fa output1.fa output2.fa
 
-#定义已知的保护序列
+#Define known protection sequences, among it the apical loop uses "GAA"
 prime_5 = 'GGCCGAAGGCCAA'
 prime_3 = 'TCGATCCGGGAACCGGATCCATAACGGTCGAAGACCGTTAC'
 
@@ -10,7 +10,7 @@ import os
 import sys
 import logging
 
-# 配置日志记录
+# Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def read_fa_file(file_path):

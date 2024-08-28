@@ -2,11 +2,11 @@ import os
 import shutil
 
 def compare_and_retain_common_files(folder1, folder2):
-    # 获取两个文件夹中的文件名列表
+    # Get a list of file names in two folders
     files1 = os.listdir(folder1)
     files2 = os.listdir(folder2)
 
-    # 创建集合存储前四个字母相同的文件名
+    # Create a collection to store file names with the same first four letters
     common_files1 = set()
     common_files2 = set()
 
@@ -16,12 +16,12 @@ def compare_and_retain_common_files(folder1, folder2):
                 common_files1.add(file1)
                 common_files2.add(file2)
 
-    # 删除不在common_files1中的文件
+    # Delete files that are not in common_files1
     for file1 in files1:
         if file1 not in common_files1:
             os.remove(os.path.join(folder1, file1))
 
-    # 删除不在common_files2中的文件
+    # Delete files that are not in common_files2
     for file2 in files2:
         if file2 not in common_files2:
             os.remove(os.path.join(folder2, file2))

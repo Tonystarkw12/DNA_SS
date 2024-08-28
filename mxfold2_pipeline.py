@@ -5,7 +5,7 @@ import sys
 import argparse
 import subprocess
 
-# 运行mxfold2
+# Run mxfold2
 def run_mxfold2(input_file, results_folder):
     try:
         file_name = os.path.basename(input_file).replace('.fa', '')
@@ -17,7 +17,7 @@ def run_mxfold2(input_file, results_folder):
     except Exception as e:
         print(f"Unexpected error: {e}")
 
-# 处理mxfold2的输出
+# Process mxfold2 output
 def process_mxfold2(results_folder):
     try:
         files = os.listdir(results_folder)
@@ -37,7 +37,7 @@ def process_mxfold2(results_folder):
     except Exception as e:
         print(f"Error processing mxfold2 output: {e}")
 
-# 画图
+# Draw the plots
 def plot(results_folder, plots_folder):
     try:
         os.makedirs(plots_folder, exist_ok=True)
