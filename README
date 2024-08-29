@@ -1,4 +1,4 @@
 # The DNA_SS repo is designed to handle DNA secondary structure related problems.
 # Usually the purposes of each script is indicated by their names should be pretty intuitive, but if you have any questiones, do read the comments.
 # visualization_RNAss.bash is designed for pipeline visualization of both RNA secondary structure and DNA secondary structures and pipeline_processDNAss.py is for pipeline DNA secondary structures prediction.
-# The exact hierarchy of the scripts may not be perfectly organized.
+# The exact hierarchy of the scripts may not be perfectly organized, there're many folders under current directory contains the data of the samples, but not part of the code repo.

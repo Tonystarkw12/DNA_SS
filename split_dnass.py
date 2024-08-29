@@ -7,9 +7,9 @@ import argparse
 
 def split_ss_file(file_path):
     """
-    分割包含多个DNA序列的ct或dbn文件。
-    
-    :param file_path: .ct或.dbn文件的路径
+    Split a ct or dbn file containing multiple DNA sequences.
+    The file will be split into multiple files, each containing one DNA sequence.
+:param file_path: path to the .ct or .dbn file
     """
     file_name, file_extension = os.path.splitext(file_path)  
     file_counter = 1
