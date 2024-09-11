@@ -33,7 +33,7 @@ for file in "$input_folder"/*; do
     filename=$(basename -- "$file")
     extension="${filename##*.}"
     filename="${filename%.*}"
-        if ! java -cp /home/tony/VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i "$file" -o "$output_folder/$filename.svg"; then
+        if ! java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i "$file" -o "$output_folder/$filename.svg"; then
             echo "Visualization failed for $file"
             continue
         fi
