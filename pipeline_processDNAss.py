@@ -1,5 +1,5 @@
 #This script is used for processing DNA secondary structures predictions on a batch profile
-#Usage: bash pipeline_processDNAss.sh <input directory>
+#Usage: bash pipeline_processDNAss.sh -i <input directory> -o <output directory> -t <type>
 import os
 import subprocess
 import glob
@@ -102,6 +102,10 @@ def main():
     parser.add_argument('-o', '--output_folder', type=str, required=True, help='THe path of the output folder')
     parser.add_argument('-t','--type', type=str, default='DNA', help='Specifies whether to process DNA or RNA. The default is DNA.')
     args = parser.parse_args()
+    
+    #Everytime before run, delete the output folder if exists
+    cmd = f'rm -rf "{args.output_folder}"'
+    subprocess.run(cmd, shell=True)
     
     results_folder = os.path.join(args.output_folder, 'results')
     mfold_folder = os.path.join(results_folder, 'mfold')
