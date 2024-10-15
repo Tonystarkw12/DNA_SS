@@ -64,7 +64,7 @@ def plot(mfold_folder, rnastructure_folder, mfold_plot_folder, rnastructure_plot
 def clean_originalct(directory):
     try:
         for filename in os.listdir(directory):
-            if "_" not in filename:
+            if filename.count("_") < 2:
                 file_path = os.path.join(directory, filename)
                 if os.path.isfile(file_path):
                     os.remove(file_path)
@@ -127,15 +127,16 @@ def main():
         run_RNAstructure(input_file, rnastructure_folder, args.type)
     #Process RNAstructure output
     process_RNAss_output(rnastructure_folder)
-    #process_RNAss_output(mfold_folder) (It seems that mfold will automatically split itself and does not need to be split again)
-    clean_originalct(rnastructure_folder)
     removeduplicates(rnastructure_folder)
     
     #Process mfold output
     cleanup_nonct_files(mfold_folder)
-    clean_originalct(mfold_folder)
     rename_files(mfold_folder)
     removeduplicates(mfold_folder)
+    
+    #clear out original ct files
+    clean_originalct(rnastructure_folder)
+    clean_originalct(mfold_folder)
     
     #Draw the plots
     plot(mfold_folder, rnastructure_folder, mfold_plot_folder, rnastructure_plot_folder)
