@@ -1,21 +1,18 @@
-#This script is used to measure the predicted structure with realstructure and statistical analysis of f1 score.
-#Usage: python cal_f1_batch.py -dir1 <directory1> -dir2 <directory2> -p <picture>
 import sys
 import os
-sys.path.append('/mnt/StorageNaN/learn_ai/xueyi/scripts')
+
 import nass
 from nass import Nass
 import argparse
 import matplotlib.pyplot as plt
 import numpy as np
 
-def find_matching_files(directory, exclude_suffix="_2.ct"):
+def find_matching_files(directory, suffix="_1.ct"):
     matched_files = {}
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.endswith(exclude_suffix):
-                continue
-            matched_files[file] = os.path.join(root, file)
+            if file.endswith(suffix):
+                matched_files[file] = os.path.join(root, file)
     return matched_files
 
 def cal_f1(nass1, nass2):
@@ -29,16 +26,19 @@ def cal_f1(nass1, nass2):
         return None
 
 def main(folder1, folder2, picture):
-    # Perform special processing on the first folder and remove all files ending with _2.ct
-    files1 = find_matching_files(folder1, "_2.ct")
-    files2 = find_matching_files(folder2)
-
+    # Find files ending with _1.ct in both folders
+    files1 = find_matching_files(folder1, "_1.ct")
+    files2 = find_matching_files(folder2, "_1.ct")
+    if not os.path.exists(picture):
+        os.makedirs(picture)
+    boxplot = picture + "_boxplot.png"
+    histogram = picture + "_histogram.png"
     f1_scores = []
     for filename1 in files1:
-        # Get the first four characters of the file name
-        prefix1 = filename1[:4]
+        # Get the prefix using the first two parts separated by '_'
+        prefix1 = '_'.join(filename1.split('_')[:2])
         for filename2 in files2:
-            prefix2 = filename2[:4]
+            prefix2 = '_'.join(filename2.split('_')[:2])
             if prefix1 == prefix2:
                 f1 = cal_f1(files1[filename1], files2[filename2])
                 if f1 is not None:
@@ -71,8 +71,19 @@ def main(folder1, folder2, picture):
     plt.ylabel('F1 Score')
 
     plt.tight_layout()
-    plt.savefig(picture)
+    plt.savefig(boxplot)
     plt.show()  
+    
+    # Draw the histogram
+    plt.figure(figsize=(12, 6))
+    plt.hist(f1_scores, bins=20, color='blue', edgecolor='black')
+    plt.title('Histogram of F1 Scores')
+    plt.xlabel('F1 Score')
+    plt.ylabel('Frequency')
+    plt.tight_layout()
+    plt.savefig(histogram)
+    plt.show()
+    
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Calculate F1 scores between matched files in two directories")
@@ -87,4 +98,3 @@ if __name__ == '__main__':
     else:
         print("Please provide two directories")
         sys.exit(1)
-

@@ -1,5 +1,6 @@
 #This script is used for processing DNA secondary structures predictions on a batch profile
 #Usage: bash pipeline_processDNAss.sh -i <input directory> -o <output directory> -t <type>
+#This file will automatically split into ct files with different energy levels and draw the plots
 import os
 import subprocess
 import glob

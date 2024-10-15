@@ -2,7 +2,6 @@
 # Add path (assuming you need to append it to sys.path for module resolution)
 import sys
 import os
-sys.path.append('/mnt/StorageNaN/learn_ai/xueyi/scripts')
 import nass
 from nass import Nass
 import argparse
